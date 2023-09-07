@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+.wrapper {
+  @apply min-h-screen w-full bg-gray-300 flex items-center justify-center;
+}
+
+.heading {
+  @apply text-4xl font-bold tracking-widest text-center py-4;
+}
+
+.option.correct {
+  @apply text-white bg-green-500;
+}
+
+.option.incorrect {
+  @apply text-white bg-red-500;
+}
+
+.option {
+  @apply text-black bg-white shadow-md rounded-md text-xl py-4 px-2 cursor-pointer disabled:cursor-default;
+}
+
+.divider {
+  @apply bg-gray-300 rounded-lg h-1 w-full;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #565050;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f9ecec;
+  border-radius: 10px;
+}
